@@ -1,0 +1,14 @@
+server:
+  port: 8082
+
+kafka:
+  properties:
+    bootstrap.servers: localhost:9092
+    key.serializer: org.apache.kafka.common.serialization.StringSerializer
+    value.serializer: org.apache.kafka.common.serialization.StringSerializer
+  consumer: 
+    group-id: spring-kafka-str-froup-id
+
+ms-consumer:
+  topic:
+    kafka-topic-str: "topic-string-message"

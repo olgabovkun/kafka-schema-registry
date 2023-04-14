@@ -1,0 +1,15 @@
+plugins {
+	id 'com.springkafka.common-conventions'
+	alias(libs.plugins.spring.boot)
+	alias(libs.plugins.spring.dependency.management)
+}
+
+dependencies {
+	implementation libs.spring.boot.web
+	testImplementation libs.spring.boot.test
+	// implementation project(':commons')
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}

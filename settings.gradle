@@ -1,0 +1,3 @@
+rootProject.name = 'springkafka'
+include 'ms-producer'
+include 'ms-consumer'
