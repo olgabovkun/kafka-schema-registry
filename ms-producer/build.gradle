@@ -7,7 +7,6 @@ plugins {
 dependencies {
 	implementation libs.spring.boot.web
 	testImplementation libs.spring.boot.test
-	// implementation project(':commons')
 }
 
 tasks.named('test') {
