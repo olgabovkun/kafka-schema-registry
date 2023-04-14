@@ -13,5 +13,5 @@ Docker Compose uses the Compose file format to running multi-container applicati
 **Step 3.** Create docker containers using `docker compose up -d` (-d flag runs in the background and lets you access the terminal after starting)  
 **Step 4.** You are ready to work with kafka!  
   
-Step last. Stop app `docker compose down`  
+**Step last.** Stop app `docker compose down`  
 
