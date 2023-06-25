@@ -40,7 +40,7 @@ In this application, we'll use the Avro format.
     "type": "NEW"
 }'`  
 **Step 4.** Find logs in consumer app  
-`Received message: {"message": "hello world", "content": "new", "type": "NEW"}` 
+`Received message: {"message": "hello world", "content": "content", "type": "NEW"}` 
 
 **Step last.** Stop app docker compose down  
 
