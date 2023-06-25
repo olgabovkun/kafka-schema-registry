@@ -13,10 +13,18 @@ configurations {
 }
 
 repositories {
+	gradlePluginPortal()
     mavenCentral()
+	maven { url = "https://packages.confluent.io/maven/" }
 }
 
 dependencies {
-	implementation libs.lombok
+	compileOnly libs.lombok
+	annotationProcessor libs.lombok
 	implementation libs.spring.kafka
+	implementation libs.confluent.kafka.avro.serializer
+	implementation libs.apache.avro
+
+	implementation libs.mapstruct
+    annotationProcessor libs.mapstruct.processor
 }

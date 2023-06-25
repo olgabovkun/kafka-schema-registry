@@ -3,10 +3,14 @@ server:
 
 spring:
   kafka:
-    bootstrap-servers: localhost:9092
-    key.serializer: org.apache.kafka.common.serialization.StringSerializer
-    value.serializer: org.apache.kafka.common.serialization.StringSerializer
+    producer:
+      bootstrap-servers: localhost:9092
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: io.confluent.kafka.serializers.KafkaAvroSerializer
+    properties:
+      schema.registry.url: http://0.0.0.0:8081
+
 
 ms-producer:
   topic:
-    kafka-topic-str: "topic-string-message"
+    kafka-topic-message-avro: "topic-avro-message"

@@ -1,14 +1,17 @@
 server:
   port: 8082
 
-kafka:
-  properties:
-    bootstrap.servers: localhost:9092
-    key.serializer: org.apache.kafka.common.serialization.StringSerializer
-    value.serializer: org.apache.kafka.common.serialization.StringSerializer
-  consumer: 
-    group-id: spring-kafka-str-froup-id
+spring:
+  kafka:
+    consumer: 
+      bootstrap-servers: localhost:9092
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: io.confluent.kafka.serializers.KafkaAvroDeserializer
+      group-id: spring-kafka-str-group-id  
+    properties:
+      schema.registry.url: http://0.0.0.0:8081
+      specific.avro.reader: true
 
 ms-consumer:
   topic:
-    kafka-topic-str: "topic-string-message"
+    kafka-topic-message-avro: "topic-avro-message"

@@ -1,0 +1,10 @@
+{
+    "namespace": "com.obovkun.springkafka.models.message",
+    "type": "record",
+    "name": "KafkaMessageAvro",
+    "fields": [
+        {"name": "message", "type": ["null", "string"], "default": null},
+        {"name": "content", "type": ["null", "string"], "default": null},
+        {"name": "type", "type": ["null", "string"], "default": null}
+    ]
+}

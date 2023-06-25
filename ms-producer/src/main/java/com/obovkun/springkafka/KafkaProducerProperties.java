@@ -7,5 +7,5 @@ import lombok.Data;
 @Data
 @ConfigurationProperties(prefix = "ms-producer.topic")
 public class KafkaProducerProperties {
-    private String kafkaTopicStr;
+    private String kafkaTopicMessageAvro;
 }

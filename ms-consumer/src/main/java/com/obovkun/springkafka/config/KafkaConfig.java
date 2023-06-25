@@ -14,8 +14,8 @@ import lombok.AllArgsConstructor;
 public class KafkaConfig {
     
     @Bean
-    public NewTopic topicStringMessage() {
-        return TopicBuilder.name("topic-string-message").build();
+    public NewTopic topicAvroMessage() {
+        return TopicBuilder.name("topic-avro-message").partitions(3).build();
     }
     
 }

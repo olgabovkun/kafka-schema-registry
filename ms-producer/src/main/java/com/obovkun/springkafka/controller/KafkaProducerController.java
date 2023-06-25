@@ -6,9 +6,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.obovkun.springkafka.dto.KafkaMessageDto;
+import com.obovkun.springkafka.mapstruct.AvroToKafkaMessageDtoMapper;
 import com.obovkun.springkafka.service.KafkaSender;
 
 import lombok.AllArgsConstructor;
+
 
 @AllArgsConstructor
 @RestController
@@ -19,7 +21,7 @@ public class KafkaProducerController {
     
     @PostMapping("send-message")
     public void sendMessage(@RequestBody KafkaMessageDto kafkaMessageDto) {
-        kafkaSender.sendMessage(kafkaMessageDto);
+        kafkaSender.sendMessage(AvroToKafkaMessageDtoMapper.INSTANCE.kafkaMessageDtoToAvro(kafkaMessageDto));
     }
 
 }
