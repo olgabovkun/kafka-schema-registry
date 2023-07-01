@@ -40,7 +40,7 @@ In this application, we'll use the Avro format.
 **Step 4.** Find logs in consumer app  
 `Received message: {"message": "hello world", "content": "content", "type": "NEW"}` 
 
-**Step last.** Stop app docker compose down  
+**Step last.** Stop app `docker compose down`  
 
 ### Check schemas
 * **GET /subjects**: returns a list of all registered subjects  
