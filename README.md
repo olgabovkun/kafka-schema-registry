@@ -9,7 +9,7 @@ There are several schema registry implementations available for Kafka:
 * Schema Registry by Lenses.io
 * Schema Registry by Red Hat
   
-In this application, we'll use the Confluent Schema Registry.
+In this application, we'll use the **Confluent Schema Registry**.
 
 ## Why Schema Registry and how it works
 Kafka transfers data in byte format. There is no data verification being performed at the Kafka cluster level. In fact, Kafka doesn't even know the type of data it is sending or receiving, whether it is a string or an integer. Schema Registry resides outside of Kafka cluster and handles the distribution of schemas to the producer and consumer by storing a copy of schema in the local cache.
@@ -26,6 +26,8 @@ In Kafka Schema Registry, the supported data serialization formats include Avro,
 
 In this application, we'll use the Avro format.
 
+The Avro model is stored in the `avro-models/KafkaMessageAvro.avsc` file.
+
 ## Testing
 **Step 1.** `docker compose up -d`  
 **Step 2.** Start modules ms-consumer, ms-producer  
@@ -40,6 +42,7 @@ In this application, we'll use the Avro format.
 **Step 4.** Find logs in consumer app  
 `Received message: {"message": "hello world", "content": "content", "type": "NEW"}` 
 
+Don't forget to do the last step after testing and checking schemas.
 **Step last.** Stop app `docker compose down`  
 
 ### Check schemas
