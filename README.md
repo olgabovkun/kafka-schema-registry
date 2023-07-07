@@ -24,9 +24,9 @@ Before processing a message, the consumer communicates with the schema registry 
 In Kafka Schema Registry, the supported data serialization formats include Avro, JSON, and Protobuf. Avro is commonly used due to its compactness, self-descriptive nature, and schema evolution capabilities. 
 **Keep in mind** that with JSON and Protobuf serialization, you will need to manage the schema versioning and compatibility manually, as there is no centralized registry like the Confluent Schema Registry to handle schema evolution and validation for you.
 
-In this application, we'll use the Avro format.
+In this application, we'll use the Avro format.  
 
-The Avro model is stored in the `avro-models/KafkaMessageAvro.avsc` file.
+The Avro model is stored in the `avro-models/KafkaMessageAvro.avsc` file.  
 
 ## Testing
 **Step 1.** `docker compose up -d`  
@@ -42,7 +42,7 @@ The Avro model is stored in the `avro-models/KafkaMessageAvro.avsc` file.
 **Step 4.** Find logs in consumer app  
 `Received message: {"message": "hello world", "content": "content", "type": "NEW"}` 
 
-Don't forget to do the last step after testing and checking schemas.
+Don't forget to do the last step after testing and checking schemas.  
 **Step last.** Stop app `docker compose down`  
 
 ### Check schemas
